@@ -1,5 +1,9 @@
 # https://takeuforward.org/data-structure/maximum-product-subarray-in-an-array/
 
+
+# Solution:
+# https://www.youtube.com/watch?v=hnswaLJvr6g
+
 # Brute force :
 # def maxProductSubArray(nums):
 #     result = float('-inf')
@@ -38,5 +42,4 @@ def maxProductSubArray(arr):
 
 arr = [1, 2, -3, 0, -4, -5]
 print("The maximum product subarray is:", maxProductSubArray(arr))
-
 
