@@ -5,15 +5,19 @@
 # So, the next permutation just after {1,3,2} is {2,1,3}.
 
 
-def next_per(arr):
-    for i in range(len(arr)-1,-1,-1):
-        for j in range(i-1,-1,-1):
-            if arr[i] > arr[j]:
-                arr[i],arr[j] = arr[j],arr[i]
-                return arr
-            else:
-                continue
+arr = [3,2,1,4]
 
-arr = [1,2,3]
-print(next_per(arr))
+
+for i in range(len(arr)-1,-1,-1):
+    for j in range(i-1,-1,-1):
+        if arr[i] > arr[j]:
+            arr[j],arr[i] = arr[i],arr[j]
+            res1 = arr[:j+1]
+            res2 = sorted(arr[j+1:])
+            # res2 = res2[::-1]
+            res3 = res1 + res2
+            break
+    break
+
+print(res3)
 

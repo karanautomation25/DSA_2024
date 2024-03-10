@@ -1,23 +1,16 @@
-A = [4, 1, 1, 1, 2, 3, 5]
-k = 5
-
-n = len(A)
-
-i = 0
-j = 0
-sum = 0
-max_size = 0
-while j < n:
-    sum = sum + A[j]
-    if sum < k:
-        j+=1
-
-    elif sum == k:
-        size = (j-1)-i+1
-        max_size = max(max_size,size)
-        j+=1
+arr = [3,2,1,4]
 
 
-    i+=1
-    print('hey')
+for i in range(len(arr)-1,-1,-1):
+    for j in range(i-1,-1,-1):
+        if arr[i] > arr[j]:
+            arr[j],arr[i] = arr[i],arr[j]
+            res1 = arr[:j+1]
+            res2 = sorted(arr[j+1:])
+            # res2 = res2[::-1]
+            res3 = res1 + res2
+            break
+    break
+
+print(res3)
 

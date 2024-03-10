@@ -1,0 +1,1 @@
+# LPS = LCS(s,rev(s))
